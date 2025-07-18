@@ -24,4 +24,4 @@ class JobApplication(TimeStampedModel):
         verbose_name_plural = "Job Applications"
 
     def __str__(self):
-        return f"{self.user.first_name} {self.user.last_name} - {self.job.title}"
+        return f"{self.user.username} - {self.job.title}"

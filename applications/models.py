@@ -1,6 +1,6 @@
 from django.db import models
 from utils.models import TimeStampedModel
-
+from .manager import ApplicationManager
 
 class JobApplication(TimeStampedModel):
     job = models.ForeignKey("jobs.Job", on_delete=models.CASCADE)
@@ -16,6 +16,8 @@ class JobApplication(TimeStampedModel):
             ("rejected", "Rejected"),
         ],
     )
+
+    objects = ApplicationManager()
 
     class Meta:
         verbose_name = "Job Application"

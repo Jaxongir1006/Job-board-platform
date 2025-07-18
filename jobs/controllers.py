@@ -1,6 +1,6 @@
 from ninja_extra import api_controller, http_get, http_post, http_put, http_delete
 from .models import Job, JobCategory
-from .schemas import JobSchema, JobCategorySchema, CreateJobSchema
+from .schemas import JobSchema, JobCategorySchema, CreateJobSchema, UpdateJobSchema
 from ninja_jwt.authentication import JWTAuth
 from utils.permissions import IsAuthenticatedAndNotDeleted
 from typing import List
@@ -17,7 +17,7 @@ class JobsController:
 
     @http_get("jobs/{category_slug}/", response=List[JobSchema])
     def get_jobs(self, category_slug: str):
-        return Job.objects.filter(category__slug=category_slug)
+        return Job.objects.filter(category__slug=category_slug, status="open")
 
     @http_get("job/{job_slug}/", response=JobSchema)
     def get_job(self, job_slug: str):
@@ -29,16 +29,53 @@ class JobsController:
         return job
 
     @http_post("create-job/", response=dict)
-    def create_job(self, data: CreateJobSchema):
+    def create_job(self, request, data: CreateJobSchema):
+        user = request.user
         data = data.model_dump()
         category = JobCategory.objects.filter(slug=data["category"]).first()
         if not category:
             return HttpError(400, "Category not found")
         data["category"] = category
-        job = Job.objects.create(**data)
+        job = Job.objects.create(**data, user=user)
+        if not job:
+            return HttpError(400, "Job not created")
         return {
             "message": "Job created successfully",
             "slug": job.slug,
             "category": job.category.title,
             "title": job.title,
         }
+
+    @http_put("update-job/{job_slug}/", response=JobSchema)
+    def update_job(self, job_slug: str, request, data: UpdateJobSchema):
+        user = request.user
+        data = data.model_dump(exclude_unset=True)
+        job = Job.objects.filter(slug=job_slug, user=user).first()
+        if not job:
+            return HttpError(400, "Job not found")
+        for field, value in data.items():
+            setattr(job, field, value)
+        job.save()
+        return JobSchema.from_orm(job)
+
+
+    @http_delete("delete-job/{job_slug}/", response=dict)
+    def disactivate_job(self, job_slug: str, request):
+        user = request.user
+        job = Job.objects.filter(slug=job_slug, user=user).first()
+        if not job:
+            return HttpError(400, "Job not found")
+        job.status = 'closed'
+        job.save()
+        return {"message": "Job deleted successfully"}
+    
+
+    @http_put('reactivate-job/{job_slug}/', response=dict)
+    def reactivate_job(self, job_slug: str, request):
+        user = request.user
+        job = Job.objects.filter(slug=job_slug, user=user).first()
+        if not job:
+            return HttpError(400, "Job not found")
+        job.status = 'open'
+        job.save()
+        return {"message": "Job reactivated successfully"}

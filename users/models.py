@@ -36,6 +36,7 @@ class CustomUser(AbstractBaseUser, PermissionsMixin, TimeStampedModel):
         return self.username
     
     def delete(self, using=None, keep_parents=False):
+        self.is_active = False
         self.is_deleted = True
         self.deleted_at = now() 
         self.save()

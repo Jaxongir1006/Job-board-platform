@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ariza natijasi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f6f6;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #333333;
+    }
+
+    p {
+      color: #555555;
+      line-height: 1.5;
+    }
+
+    .status {
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .accepted {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .rejected {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .contact-box {
+      background-color: #f1f1f1;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      color: #333333;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #999999;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Ariza natijasi</h2>
+    <p>Siz yuborgan ariza quyidagi ish uchun edi:</p>
+    <p><strong>{{ job_title }}</strong></p>
+
+    {% if result == "QABUL QILINDI" %}
+      <p class="status accepted">Natija: Qabul qilindingiz 🎉</p>
+
+      <div class="contact-box">
+        <p>Ish beruvchi bilan bog‘lanish uchun kontakt:</p>
+        <strong>{{ contact }}</strong>
+      </div>
+    {% else %}
+      <p class="status rejected">Natija: Afsuski, rad etildingiz ❌</p>
+    {% endif %}
+
+    <p class="footer">
+      Hurmat bilan,<br>
+      <strong>Job Board Platform</strong> jamoasi
+    </p>
+  </div>
+</body>
+</html>

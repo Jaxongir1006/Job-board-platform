@@ -28,7 +28,7 @@ class Job(TimeStampedModel):
     category = models.ForeignKey(
         JobCategory, on_delete=models.CASCADE, related_name="jobs"
     )
-    contact = models.EmailField()
+    contact = models.CharField(max_length=20)
     title = models.CharField(max_length=100, null=True)
     description = models.TextField(null=True)
     salary = models.PositiveIntegerField(null=True)

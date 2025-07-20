@@ -25,3 +25,7 @@ class JobApplication(TimeStampedModel):
 
     def __str__(self):
         return f"{self.user.username} - {self.job.title}"
+
+    @property
+    def resume_url(self):
+        return self.resume.url if self.resume else None

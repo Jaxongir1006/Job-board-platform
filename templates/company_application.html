@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Yangi ariza</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f6f6;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #333333;
+    }
+
+    p {
+      color: #555555;
+      line-height: 1.5;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 10px 5px 0 0;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .accept-btn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .reject-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #999999;
+      text-align: center;
+    }
+    .resume {
+      background-color: #f1f1f1;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      color: #333333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Yangi ariza!</h2>
+    <p><strong>{{ seeker_name }}</strong> quyidagi ishga ariza yubordi: <strong>{{ job_title }}</strong></p>
+
+    <p>Arizani ko‘rib chiqing va qaror qabul qiling:</p>
+
+    <p class="resume">{{ resume }}</p>
+
+    <a href="{{ accept_url }}" class="button accept-btn">Qabul qilish</a>
+    <a href="{{ reject_url }}" class="button reject-btn">Rad etish</a>
+
+    <p class="footer">
+      Hurmat bilan,<br>
+      <strong>Job Board Platform</strong> jamoasi
+    </p>
+  </div>
+</body>
+</html>

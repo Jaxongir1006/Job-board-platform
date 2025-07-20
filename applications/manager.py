@@ -7,6 +7,6 @@ class ApplicationManager(Manager):
         user = kwargs.get('user') or kwargs['user']
         if user.is_deleted:
             raise HttpError(400, "The user has been deleted\nPlease contact the administrator and reactivate your account")
-        if user.user_type not in ('company', 'admin'):
+        if user.user_type not in ('job_seeker', 'admin'):
             raise HttpError(400, "You don't have permission to create application")
         return super().create(**kwargs)

@@ -34,8 +34,8 @@ AUTH_USER_MODEL = "users.CustomUser"
 
 
 AUTHENTICATION_BACKENDS = [
-    'users.backends.CustomUserBackend', 
-    'django.contrib.auth.backends.ModelBackend',
+    "users.backends.CustomUserBackend",
+    "django.contrib.auth.backends.ModelBackend",
 ]
 
 
@@ -56,9 +56,11 @@ INSTALLED_APPS = [
     "users",
     "utils",
     "jobs",
-    'applications',
-    'notifications',
+    "applications",
+    "notifications",
     "favourite_jobs",
+    'review',
+    "django_elasticsearch_dsl",
 ]
 
 MIDDLEWARE = [
@@ -91,36 +93,86 @@ TEMPLATES = [
 WSGI_APPLICATION = "Job_Board_Platform.wsgi.application"
 
 
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "{asctime} {levelname} {name} {message}",
+            "style": "{",
+        },
+    },
+    "handlers": {
+        "file": {
+            "level": "INFO",
+            "class": "logging.FileHandler",
+            "filename": BASE_DIR / "logs/app.log",
+            "formatter": "verbose",
+        },
+    },
+    "loggers": {
+        "django": {
+            "handlers": ["file"],
+            "level": "INFO",
+            "propagate": True,
+        },
+        # Har bir modul avtomatik aniqlanadi
+    },
+}
+
+
+
+NINJA_EXTRA_SETTINGS = {
+    "DEFAULT_THROTTLE_CLASSES": [
+        "Job_Board_Platform.throttles.SimpleRateThrottle",  # to‘liq path
+    ]
+}
+
+
+ELASTICSEARCH_DSL = {"default": {"hosts": "http://elasticsearch:9200"}}
+
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://redis-test:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        },
+    }
+}
+
+
 NINJA_JWT = {
-    "ACCESS_TOKEN_LIFETIME": timedelta(days=7),  
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=7),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=30),
     "SIGNING_KEY": SECRET_KEY,
-    "USER_ID_FIELD": "id",  
+    "USER_ID_FIELD": "id",
     "USER_ID_CLAIM": "user_id",
 }
 
 
-CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL', 'redis://localhost:6379/0')
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL", "redis://localhost:6379/0")
 
 
-EMAIL_BACKEND = config('EMAIL_BACKEND')
-EMAIL_HOST = config('EMAIL_HOST')
-EMAIL_PORT = config('EMAIL_PORT', cast=int)
-EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_BACKEND = config("EMAIL_BACKEND")
+EMAIL_HOST = config("EMAIL_HOST")
+EMAIL_PORT = config("EMAIL_PORT", cast=int)
+EMAIL_USE_TLS = config("EMAIL_USE_TLS", cast=bool)
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': os.environ.get('SQL_ENGINE', 'django.db.backends.postgresql'),
-        'NAME': os.environ.get('SQL_DATABASE', 'job_db'),     
-        'USER': os.environ.get('SQL_USER', 'job_user'),
-        'PASSWORD': os.environ.get('SQL_PASSWORD', 'job_password'),
-        'HOST': os.environ.get('SQL_HOST', 'db'),
-        'PORT': os.environ.get('SQL_PORT', '5432'),
+    "default": {
+        "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.postgresql"),
+        "NAME": os.environ.get("SQL_DATABASE", "job_db"),
+        "USER": os.environ.get("SQL_USER", "job_user"),
+        "PASSWORD": os.environ.get("SQL_PASSWORD", "job_password"),
+        "HOST": os.environ.get("SQL_HOST", "db"),
+        "PORT": os.environ.get("SQL_PORT", "5432"),
     }
 }
 # Password validation

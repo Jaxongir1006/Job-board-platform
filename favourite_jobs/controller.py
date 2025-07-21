@@ -6,7 +6,9 @@ from ninja.errors import HttpError
 from .schemas import FavouriteJobSchema
 from typing import List
 from jobs.models import Job
+import logging
 
+logger = logging.getLogger("__name__")
 
 @api_controller(tags=["Favourite Jobs"], auth=JWTAuth(), permissions=[IsAuthenticatedAndNotDeleted])
 class FavouriteJobsController:
@@ -17,6 +19,7 @@ class FavouriteJobsController:
         try:
             job = Job.objects.get(slug=job_slug)
         except Job.DoesNotExist:
+            logger.error("Job not found")
             raise HttpError(404, "Job not found")
 
         if FavouriteJob.objects.filter(job=job, user=user).exists():
@@ -38,10 +41,11 @@ class FavouriteJobsController:
         try:
             job = Job.objects.get(slug=job_slug)
         except Job.DoesNotExist:
-            raise HttpError(404, "Job not found")
+            logger.error("Job not found")
+            raise {"message": "Job not found"}
 
         if not FavouriteJob.objects.filter(job=job, user=user).exists():
-            raise HttpError(400, "Job not favourited")
+            raise {"message": "Favourite Job not found"}
 
         FavouriteJob.objects.filter(job=job, user=user).delete()
         return {"message": "Job unfavourited successfully"}

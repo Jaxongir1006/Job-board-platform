@@ -1,0 +1,253 @@
+2025-07-21 05:34:26,628 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 05:35:00,928 INFO django.server "GET /admin/ HTTP/1.1" 200 24592
+2025-07-21 05:35:00,977 INFO django.server "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 103009
+2025-07-21 05:35:00,985 WARNING django.server "GET /static/static/images/logo.png HTTP/1.1" 404 1880
+2025-07-21 05:35:00,985 INFO django.server "GET /static/jazzmin/css/main.css HTTP/1.1" 200 16969
+2025-07-21 05:35:00,989 INFO django.server "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 200 44244
+2025-07-21 05:35:00,990 INFO django.server "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 62440
+2025-07-21 05:35:00,992 INFO django.server "GET /static/jazzmin/js/main.js HTTP/1.1" 200 2391
+2025-07-21 05:35:00,994 INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+2025-07-21 05:35:00,997 INFO django.server "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 200 1382975
+2025-07-21 05:35:01,091 INFO django.server "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 25392
+2025-07-21 05:35:01,092 INFO django.server "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 156400
+2025-07-21 05:35:01,127 WARNING django.server "GET /static/static/images/logo.png HTTP/1.1" 404 1880
+2025-07-21 05:35:02,884 INFO django.server "GET /admin/users/customuser/ HTTP/1.1" 200 19219
+2025-07-21 05:35:02,929 INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+2025-07-21 05:35:02,930 INFO django.server "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 200 16264
+2025-07-21 05:35:02,932 INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+2025-07-21 05:35:02,934 INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+2025-07-21 05:35:02,937 INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+2025-07-21 05:35:02,938 INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+2025-07-21 05:35:02,939 INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+2025-07-21 05:35:02,945 WARNING django.server "GET /static/static/images/logo.png HTTP/1.1" 404 1880
+2025-07-21 05:35:02,946 INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+2025-07-21 05:35:02,948 INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+2025-07-21 05:35:02,958 INFO django.server "GET /static/jazzmin/js/change_list.js HTTP/1.1" 200 2252
+2025-07-21 05:35:02,958 INFO django.server "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 200 73170
+2025-07-21 05:35:08,749 INFO django.server "GET /admin/users/customuser/2/change/ HTTP/1.1" 200 30902
+2025-07-21 05:35:08,770 INFO django.server "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+2025-07-21 05:35:08,770 INFO django.server "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+2025-07-21 05:35:08,770 INFO django.server "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+2025-07-21 05:35:08,770 INFO django.server "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 304 0
+2025-07-21 05:35:08,774 INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2025-07-21 05:35:08,774 INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2025-07-21 05:35:08,775 INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2025-07-21 05:35:08,775 INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2025-07-21 05:35:08,777 INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2025-07-21 05:35:08,779 INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+2025-07-21 05:35:08,780 INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2025-07-21 05:35:08,823 INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2025-07-21 05:35:08,824 INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2025-07-21 05:35:08,825 INFO django.server "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+2025-07-21 05:35:08,829 INFO django.server "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+2025-07-21 05:35:08,829 WARNING django.server "GET /static/static/images/logo.png HTTP/1.1" 404 1880
+2025-07-21 05:35:08,830 INFO django.server "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+2025-07-21 05:35:08,832 INFO django.server "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+2025-07-21 05:35:08,888 INFO django.server "GET /static/jazzmin/js/main.js HTTP/1.1" 304 0
+2025-07-21 05:35:08,889 INFO django.server "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 304 0
+2025-07-21 05:35:08,889 INFO django.server "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+2025-07-21 05:35:08,890 INFO django.server "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-07-21 05:35:08,890 INFO django.server "GET /static/jazzmin/js/change_form.js HTTP/1.1" 200 6052
+2025-07-21 05:35:08,891 INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+2025-07-21 05:35:14,159 INFO django.server "POST /admin/users/customuser/2/change/ HTTP/1.1" 302 0
+2025-07-21 05:35:14,179 INFO django.server "GET /admin/users/customuser/ HTTP/1.1" 200 19784
+2025-07-21 05:35:14,194 INFO django.server "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+2025-07-21 05:35:14,196 INFO django.server "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+2025-07-21 05:35:14,197 INFO django.server "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+2025-07-21 05:35:14,197 INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2025-07-21 05:35:14,197 INFO django.server "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 304 0
+2025-07-21 05:35:14,199 INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2025-07-21 05:35:14,200 INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2025-07-21 05:35:14,201 INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2025-07-21 05:35:14,202 INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2025-07-21 05:35:14,205 INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+2025-07-21 05:35:14,206 INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2025-07-21 05:35:14,240 INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2025-07-21 05:35:14,260 INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2025-07-21 05:35:14,265 WARNING django.server "GET /static/static/images/logo.png HTTP/1.1" 404 1880
+2025-07-21 05:35:14,265 INFO django.server "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-07-21 05:35:14,267 INFO django.server "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+2025-07-21 05:35:14,313 INFO django.server "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 304 0
+2025-07-21 05:35:14,313 INFO django.server "GET /static/jazzmin/js/main.js HTTP/1.1" 304 0
+2025-07-21 05:35:14,322 INFO django.server "GET /static/jazzmin/js/change_list.js HTTP/1.1" 304 0
+2025-07-21 05:35:17,733 WARNING django.request "POST - RegisterAndLoginController[login] /api/login/" ()
+2025-07-21 05:35:17,733 ERROR django 2 validation errors for NinjaResponseSchema
+response.user
+  Field required [type=missing, input_value=<DjangoGetter: HttpError(...user has been deleted')>, input_type=DjangoGetter]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+response.tokens
+  Field required [type=missing, input_value=<DjangoGetter: HttpError(...user has been deleted')>, input_type=DjangoGetter]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/ninja_extra/operation.py", line 216, in run
+    _processed_results = self._result_to_response(
+        request, result, ctx.response
+    )
+  File "/usr/local/lib/python3.13/site-packages/ninja/operation.py", line 280, in _result_to_response
+    validated_object = response_model.model_validate(
+        resp_object, context={"request": request, "response_status": status}
+    )
+  File "/usr/local/lib/python3.13/site-packages/pydantic/main.py", line 705, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        obj, strict=strict, from_attributes=from_attributes, context=context, by_alias=by_alias, by_name=by_name
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for NinjaResponseSchema
+response.user
+  Field required [type=missing, input_value=<DjangoGetter: HttpError(...user has been deleted')>, input_type=DjangoGetter]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+response.tokens
+  Field required [type=missing, input_value=<DjangoGetter: HttpError(...user has been deleted')>, input_type=DjangoGetter]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-07-21 05:35:17,737 ERROR django.request Internal Server Error: /api/login/
+2025-07-21 05:35:17,738 ERROR django.server "POST /api/login/ HTTP/1.1" 500 1424
+2025-07-21 05:35:50,865 INFO django.server "GET /admin/users/customuser/2/change/ HTTP/1.1" 200 30910
+2025-07-21 05:35:50,894 INFO django.server "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+2025-07-21 05:35:50,894 INFO django.server "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+2025-07-21 05:35:50,895 INFO django.server "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+2025-07-21 05:35:50,897 INFO django.server "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 304 0
+2025-07-21 05:35:50,897 INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2025-07-21 05:35:50,898 INFO django.server "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+2025-07-21 05:35:50,899 INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2025-07-21 05:35:50,901 INFO django.server "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+2025-07-21 05:35:50,904 INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+2025-07-21 05:35:50,904 INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2025-07-21 05:35:50,908 INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2025-07-21 05:35:50,938 INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2025-07-21 05:35:50,948 INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2025-07-21 05:35:50,949 INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2025-07-21 05:35:50,950 INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2025-07-21 05:35:50,953 WARNING django.server "GET /static/static/images/logo.png HTTP/1.1" 404 1880
+2025-07-21 05:35:50,958 INFO django.server "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2025-07-21 05:35:50,959 INFO django.server "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2025-07-21 05:35:50,961 INFO django.server "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+2025-07-21 05:35:51,007 INFO django.server "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 304 0
+2025-07-21 05:35:51,007 INFO django.server "GET /static/jazzmin/js/change_form.js HTTP/1.1" 304 0
+2025-07-21 05:35:51,007 INFO django.server "GET /static/jazzmin/js/main.js HTTP/1.1" 304 0
+2025-07-21 05:35:51,007 INFO django.server "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+2025-07-21 05:35:51,018 INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2025-07-21 05:35:53,935 INFO django.server "POST /admin/users/customuser/2/change/ HTTP/1.1" 302 0
+2025-07-21 05:35:53,957 INFO django.server "GET /admin/users/customuser/ HTTP/1.1" 200 19784
+2025-07-21 05:35:53,982 WARNING django.server "GET /static/static/images/logo.png HTTP/1.1" 404 1880
+2025-07-21 05:35:53,986 INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+2025-07-21 05:35:53,998 INFO django.server "GET /static/jazzmin/js/change_list.js HTTP/1.1" 304 0
+2025-07-21 05:35:54,017 INFO django.server "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+2025-07-21 05:35:54,017 INFO django.server "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+2025-07-21 05:35:59,514 INFO django.request "POST - RegisterAndLoginController[login] /api/login/" 0.26264500617980957
+2025-07-21 05:35:59,517 INFO django.server "POST /api/login/ HTTP/1.1" 200 675
+2025-07-21 05:36:45,483 INFO django.utils.autoreload /app/users/controllers.py changed, reloading.
+2025-07-21 05:36:46,686 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 05:45:12,624 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 05:53:53,594 INFO django.utils.autoreload /app/Job_Board_Platform/settings.py changed, reloading.
+2025-07-21 05:53:55,894 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 05:57:16,947 INFO django.utils.autoreload /app/api.py changed, reloading.
+2025-07-21 05:57:20,725 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 05:57:24,504 INFO django.utils.autoreload /app/api.py changed, reloading.
+2025-07-21 05:57:26,486 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 05:57:31,300 INFO django.utils.autoreload /app/api.py changed, reloading.
+2025-07-21 05:57:33,728 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 05:58:18,645 INFO django.utils.autoreload /app/review/controller.py changed, reloading.
+2025-07-21 05:58:22,621 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 05:58:49,773 WARNING django.request "POST - ReviewController[create] /api/create-review/backend/" (400, 'Cannot parse request body (Expecting value: line 1 column 1 (char 0))')
+2025-07-21 05:58:49,786 WARNING django.request Bad Request: /api/create-review/backend/
+2025-07-21 05:58:49,788 WARNING django.server "POST /api/create-review/backend/ HTTP/1.1" 400 83
+2025-07-21 05:59:08,103 WARNING django.request "POST - ReviewController[create] /api/create-review/backend/" ('job_slug',)
+2025-07-21 05:59:08,104 ERROR django 'job_slug'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/ninja_extra/operation.py", line 214, in run
+    result = self.view_func(request, **ctx.kwargs["view_func_kwargs"])
+  File "/usr/local/lib/python3.13/site-packages/ninja_extra/controllers/route/route_functions.py", line 99, in as_view
+    result = self.route.view_func(
+        ctx.controller_instance, *args, **ctx.view_func_kwargs
+    )
+  File "/app/review/controller.py", line 15, in create
+    job = Job.objects.filter(slug=data["job_slug"]).first()
+                                  ~~~~^^^^^^^^^^^^
+KeyError: 'job_slug'
+2025-07-21 05:59:08,115 ERROR django.request Internal Server Error: /api/create-review/backend/
+2025-07-21 05:59:08,117 ERROR django.server "POST /api/create-review/backend/ HTTP/1.1" 500 608
+2025-07-21 05:59:28,774 INFO django.utils.autoreload /app/review/controller.py changed, reloading.
+2025-07-21 05:59:32,326 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 05:59:35,584 INFO django.utils.autoreload /app/review/controller.py changed, reloading.
+2025-07-21 05:59:38,222 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 05:59:47,683 INFO django.utils.autoreload /app/review/controller.py changed, reloading.
+2025-07-21 05:59:50,481 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 05:59:56,670 INFO django.request "POST - ReviewController[create] /api/create-review/backend/" 0.11641049385070801
+2025-07-21 05:59:56,672 INFO django.server "POST /api/create-review/backend/ HTTP/1.1" 200 144
+2025-07-21 06:00:42,265 WARNING django.request "POST - ReviewController[create] /api/create-review/flutter/" (400, "Cannot parse request body (Expecting ':' delimiter: line 4 column 1 (char 69))")
+2025-07-21 06:00:42,268 WARNING django.request Bad Request: /api/create-review/flutter/
+2025-07-21 06:00:42,269 WARNING django.server "POST /api/create-review/flutter/ HTTP/1.1" 400 92
+2025-07-21 06:00:56,057 INFO django.request "POST - ReviewController[create] /api/create-review/flutter/" 0.027540922164916992
+2025-07-21 06:00:56,059 INFO django.server "POST /api/create-review/flutter/ HTTP/1.1" 200 183
+2025-07-21 06:01:11,068 INFO django.utils.autoreload /app/review/admin.py changed, reloading.
+2025-07-21 06:01:15,202 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 06:01:49,127 WARNING django.request "POST - RegisterAndLoginController[login] /api/login/" ()
+2025-07-21 06:01:49,128 ERROR django 2 validation errors for NinjaResponseSchema
+response.user
+  Field required [type=missing, input_value=<DjangoGetter: HttpError(400, 'Invalid password')>, input_type=DjangoGetter]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+response.tokens
+  Field required [type=missing, input_value=<DjangoGetter: HttpError(400, 'Invalid password')>, input_type=DjangoGetter]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/ninja_extra/operation.py", line 216, in run
+    _processed_results = self._result_to_response(
+        request, result, ctx.response
+    )
+  File "/usr/local/lib/python3.13/site-packages/ninja/operation.py", line 280, in _result_to_response
+    validated_object = response_model.model_validate(
+        resp_object, context={"request": request, "response_status": status}
+    )
+  File "/usr/local/lib/python3.13/site-packages/pydantic/main.py", line 705, in model_validate
+    return cls.__pydantic_validator__.validate_python(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        obj, strict=strict, from_attributes=from_attributes, context=context, by_alias=by_alias, by_name=by_name
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+pydantic_core._pydantic_core.ValidationError: 2 validation errors for NinjaResponseSchema
+response.user
+  Field required [type=missing, input_value=<DjangoGetter: HttpError(400, 'Invalid password')>, input_type=DjangoGetter]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+response.tokens
+  Field required [type=missing, input_value=<DjangoGetter: HttpError(400, 'Invalid password')>, input_type=DjangoGetter]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-07-21 06:01:49,137 ERROR django.request Internal Server Error: /api/login/
+2025-07-21 06:01:49,139 ERROR django.server "POST /api/login/ HTTP/1.1" 500 1420
+2025-07-21 06:01:59,212 INFO django.request "POST - RegisterAndLoginController[login] /api/login/" 0.440075159072876
+2025-07-21 06:01:59,213 INFO django.server "POST /api/login/ HTTP/1.1" 200 666
+2025-07-21 06:02:16,412 INFO django.request "POST - ReviewController[create] /api/create-review/flutter/" 0.02407097816467285
+2025-07-21 06:02:16,413 INFO django.server "POST /api/create-review/flutter/ HTTP/1.1" 200 183
+2025-07-21 06:02:58,776 WARNING django.request "GET - ReviewController[list_reviews] /api/reviews/flutter/" ("'QuerySet' object has no attribute 'get_average_rating'",)
+2025-07-21 06:02:58,777 ERROR django 'QuerySet' object has no attribute 'get_average_rating'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/site-packages/ninja_extra/operation.py", line 214, in run
+    result = self.view_func(request, **ctx.kwargs["view_func_kwargs"])
+  File "/usr/local/lib/python3.13/site-packages/ninja_extra/controllers/route/route_functions.py", line 99, in as_view
+    result = self.route.view_func(
+        ctx.controller_instance, *args, **ctx.view_func_kwargs
+    )
+  File "/app/review/controller.py", line 35, in list_reviews
+    ratings = reviews.get_average_rating()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'QuerySet' object has no attribute 'get_average_rating'
+2025-07-21 06:02:58,797 ERROR django.request Internal Server Error: /api/reviews/flutter/
+2025-07-21 06:02:58,799 ERROR django.server "GET /api/reviews/flutter/ HTTP/1.1" 500 638
+2025-07-21 06:03:16,888 INFO django.utils.autoreload /app/review/controller.py changed, reloading.
+2025-07-21 06:03:19,404 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 06:03:28,067 INFO django.request "GET - ReviewController[list_reviews] /api/reviews/flutter/" 0.04377889633178711
+2025-07-21 06:03:28,069 INFO django.server "GET /api/reviews/flutter/ HTTP/1.1" 200 370
+2025-07-21 06:03:39,910 INFO django.utils.autoreload /app/review/controller.py changed, reloading.
+2025-07-21 06:03:42,177 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 06:03:46,220 INFO django.utils.autoreload /app/review/controller.py changed, reloading.
+2025-07-21 06:03:48,633 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 06:03:56,680 INFO django.utils.autoreload /app/review/controller.py changed, reloading.
+2025-07-21 06:03:58,970 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 06:04:42,258 INFO django.utils.autoreload /app/review/controller.py changed, reloading.
+2025-07-21 06:04:46,281 INFO django.utils.autoreload Watching for file changes with StatReloader
+2025-07-21 06:05:53,674 INFO django.request "DELETE - ReviewController[delete_review] /api/reviews/flutter/" 0.16916632652282715
+2025-07-21 06:05:53,675 INFO django.server "DELETE /api/reviews/flutter/ HTTP/1.1" 200 42
+2025-07-21 06:05:58,517 INFO django.request "GET - ReviewController[list_reviews] /api/reviews/flutter/" 0.02191329002380371
+2025-07-21 06:05:58,519 INFO django.server "GET /api/reviews/flutter/ HTTP/1.1" 200 185

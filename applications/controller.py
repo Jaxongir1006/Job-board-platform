@@ -8,12 +8,19 @@ from ninja.errors import HttpError
 from jobs.models import Job
 from django.shortcuts import get_object_or_404
 from .tasks import send_application_email_to_company, send_result_to_seeker
+import logging
+
+
+logger = logging.getLogger("__name__")
 
 @api_controller("", auth=JWTAuth(), permissions=[IsAuthenticatedAndNotDeleted])
 class JobApplicationController:
     @http_get("job-applications/{job_slug}/", response=List[JobApplicationSchema])
     def list(self, job_slug: str, request):
-
+        """
+        List all job applications for a specific job.
+        This endpoint retrieves all applications for a job identified by its slug.
+        """
         user = request.user
 
         job = Job.objects.filter(slug=job_slug).first()
@@ -31,6 +38,7 @@ class JobApplicationController:
             return HttpError(400, "Job not found")
         job_application = JobApplication.objects.create(job=job, user=request.user, **data.model_dump())
         # Email yuborish
+        logger.info(f"Job application created for job {job.title} by user {request.user.username}.")
         send_application_email_to_company.delay(job.user.email, job.title, job_application.user.username, job_application.id, job_application.resume.url)
         return job_application
     
@@ -43,6 +51,7 @@ class JobApplicationDetailController:
             return {"message": "Ariza allaqachon qabul qilingan yoki rad etilgan."}
         app.status = 'accepted'
         app.save()
+        logger.info(f"Application {app.id} accepted for job {app.job.title} by user {request.user.username}.")
         
         # Job seekerni email orqali ogohlantirish
         send_result_to_seeker.delay(app.user.email, app.job.title, "QABUL QILINDI", app.job.contact)
@@ -57,6 +66,7 @@ class JobApplicationDetailController:
             return {"message": "Ariza allaqachon qabul qilingan yoki rad etilgan."}
         app.status = 'rejected'
         app.save()
+        logger.info(f"Application {app.id} rejected for job {app.job.title} by user {request.user.username}.")  
 
         send_result_to_seeker.delay(app.user.email, app.job.title, "RAD ETILDI", app.job.contact)
 

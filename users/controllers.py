@@ -19,6 +19,10 @@ from ninja_jwt.tokens import RefreshToken
 from ninja.errors import HttpError
 from utils.permissions import IsAuthenticatedAndNotDeleted
 from ninja_jwt.authentication import JWTAuth
+import logging
+
+logger = logging.getLogger("__name__")
+
 
 
 @api_controller("", tags=["Register and Login"])
@@ -30,8 +34,10 @@ class RegisterAndLoginController:
             return HttpError(400, "Passwords do not match")
         data.pop("confirm_password")
         if data["user_type"] == "admin" and not request.user.is_superuser:
+            logger.error("Unauthorized attempt to create admin user")
             return HttpError(400, "You don't have permission to create admin")
         user = CustomUser.objects.create_user(**data)
+        logger.info(f"User {user.username} registered successfully.")
         UserProfile.objects.create(user=user)
         token = RefreshToken.for_user(user)
         return {
@@ -51,10 +57,13 @@ class RegisterAndLoginController:
             or CustomUser.objects.filter(phone_number=data["login_input"]).first()
         )
         if user.is_deleted:
+            logger.error(f"Login attempt by deleted user: {user.username}")
             return HttpError(400, "The user has been deleted")
         if not user:
+            logger.error("User not found for login attempt")
             return HttpError(400, "User not found")
         if not user.check_password(data["password"]):
+            logger.error(f"Invalid password for user: {user.username}")
             return HttpError(400, "Invalid password")
         token = RefreshToken.for_user(user)
         return {
@@ -93,6 +102,7 @@ class UserController:
         profile = UserProfile.objects.get(user=user)
         for field, value in data.model_dump(exclude_unset=True).items():
             setattr(profile, field, value)
+        logger.info(f"User {user.username} updated their profile.")
         profile.save()
         return UserProfileSchema(
             first_name=profile.first_name,
@@ -111,15 +121,17 @@ class UserController:
     @http_delete("me/", response=dict)
     def delete_my_profile(self, request):
         user = request.user
+        logger.info(f"User {user.username} deleted their account.")
         user.delete()
         return {"message": "User deleted successfully"}
 
     @http_put("me/password/", response=dict)
     def change_password(self, request, data: ChangePasswordSchema):
         if not request.user.check_password(data.old_password):
-            return HttpError(400, "Old password is incorrect")
+            return {"message": "Old password is incorrect"}
         if data.new_password != data.confirm_password:
-            return HttpError(400, "Passwords do not match")
+            return {"message": "New passwords do not match"}
+        logger.info(f"User {request.user.username} changed their password.")
         request.user.set_password(data.new_password)
         request.user.save()
         return {"message": "Password changed successfully"}

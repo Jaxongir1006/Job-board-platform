@@ -36,3 +36,15 @@ class UpdateJobSchema(BaseModel):
     company_name: Optional[str] = None
     company_description: Optional[str] = None
     contact: Optional[str] = None
+
+
+
+class JobSearchSchema(Schema):
+    title: Optional[str] = None
+    description: Optional[str] = None
+    location: Optional[str] = None
+    company_name: Optional[str] = None
+    status: Optional[str] = None
+    salary: Optional[int] = None
+    slug: Optional[str] = None
+    category: Optional[str] = None

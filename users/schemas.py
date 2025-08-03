@@ -48,7 +48,7 @@ class AuthTokenSchema(Schema):
 class UserResponseSchema(Schema):
     user: UserSchema
     tokens: AuthTokenSchema
-
+    
 
 class UpdateUserSchema(Schema):
     first_name: Optional[str] = None
